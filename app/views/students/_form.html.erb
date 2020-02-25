@@ -1,0 +1,93 @@
+
+<%= bootstrap_form_with(model: student, local: true) do |form| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+
+  <% end %>
+
+<br>
+<div class="container" width=200px>
+<div class="container-fluid" width=100px">
+  <form role="form" action="/users" accept-charset="UTF-8" method="post" >
+
+
+  <div class="field">
+    <div class ="form-group row">
+    <%= form.label :student_name,class: :"col-sm-2 col-form-label" %>
+    <div class="col-sm-3">
+    <%= form.text_field :student_name, id: :student_student_name, class: :"form-control",hide_label: true %>
+    </div>
+  </div>
+</div>
+<div class="field">
+<div class ="form-group row">
+
+    <%= form.label :age,class: :"col-sm-2 col-form-label" %>
+      <div class="col-sm-3">
+    <%= form.number_field :age, id: :student_age, class: :"form-control",hide_label: true %>
+  </div>
+  </div>
+</div>
+
+<div class="field">
+<div class ="form-group row">
+
+      <%= form.label :gender,class: :"col-sm-2 col-form-label" %>
+<div class="col-sm-3">
+    <div class="form-check form-check-inline">
+      <%= form.radio_button 'gender','male' %>
+      <%= form.radio_button 'gender','female' %>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="field">
+<div class ="form-group row">
+
+    <%= form.label :address,class: :"col-sm-2 col-form-label" %>
+    <div class="col-sm-3">
+    <%= form.text_area :address, id: :student_address,class: :"form-control",hide_label: true %>
+  </div>
+  </div>
+  </div>
+  <div class="field">
+<div class ="form-group row">
+
+    <%= form.label :mobile_no,class: :"col-sm-2 col-form-label" %>
+    <div class="col-sm-3">
+    <%= form.number_field :mobile_no, id: :student_mobile_no,class: :"form-control",hide_label: true %>
+  </div>
+  </div>
+  </div>
+  <div class="field">
+<div class ="form-group row">
+
+    <%= form.label :email,class: :"col-sm-2 col-form-label" %>
+    <div class="col-sm-3">
+    <%= form.text_field :email, id: :student_email,class: :"form-control",hide_label: true %>
+  </div>
+  </div>
+  </div>
+  <div class="form-group row">
+         <div class="col-sm-10 offset-sm-2">
+  <div class="actions">
+    <%= form.submit   class: "btn btn-success btn-sm" %>
+    <%= link_to 'Back', students_path, class: "btn btn-primary btn-sm" %>
+
+  </div>
+ </div>
+ </div>
+
+  </form>
+
+</div>
+</div>
+<% end %>

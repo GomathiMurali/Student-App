@@ -1,0 +1,47 @@
+
+
+<div class="container"  >
+
+
+<br>
+<h4>Student Detail</h4>
+
+</div>
+
+<p id="notice"><%= notice %></p>
+<div class ="container"  style= "width:100%;">
+<table>
+  
+    <tbody>
+     <tr>
+        <th scope="row">Student name:</th>
+        <td ><%= @student.student_name %></td>
+      </tr>
+      <tr>
+          <th scope="row">Age:</th>
+          <td>  <%= @student.age %></td>
+      </tr>
+      <tr>
+          <th scope="row">Gender:</th>
+          <td><%= @student.gender %><td>
+
+      </tr>
+      <tr>
+          <th scope="row">Address:</th>
+          <td>  <%= @student.address %></td>
+      </tr>
+      <tr>
+          <th scope="row">Mobile no:</th>
+          <td>  <%= @student.mobile_no %></td>
+      </tr>
+      <tr>
+          <th scope="row">Email:</th>
+          <td>  <%= @student.email %></td>
+      </tr>
+      </tbody>
+  </table>
+  <br>
+<%= link_to 'Edit', edit_student_path(@student), class: "btn btn-success btn-sm" %>
+<%= link_to 'Back', students_path, class: "btn btn-primary btn-sm" %></b>
+
+</div>
