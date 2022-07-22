@@ -71,10 +71,9 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
-    data-confirm-modal (1.6.3)
-      railties (>= 3.0)
     erubi (1.9.0)
     execjs (2.7.0)
+    ffi (1.12.2)
     ffi (1.12.2-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -96,6 +95,8 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.0)
     nio4r (2.5.2)
+    nokogiri (1.10.8)
+      mini_portile2 (~> 2.4.0)
     nokogiri (1.10.8-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     popper_js (1.16.0)
@@ -161,7 +162,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.6)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     tzinfo-data (1.2019.3)
       tzinfo (>= 1.0.0)
@@ -180,6 +181,7 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   bootstrap (~> 4.0.0)
@@ -187,7 +189,6 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   coffee-rails (~> 4.2)
-  data-confirm-modal
   jbuilder (~> 2.5)
   jquery-rails
   puma (~> 3.7)
